@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "product_name": "egrrgdfgdfg",
+      "price": "dfgdfgdfgdfgdfgdfgdfgfdg",
+      "created_at": "2025-06-25T04:35:59.656Z",
+      "id": 1
+    },
+    {
+      "product_name": "asin pyay lr lox",
+      "price": "dfgdfg",
+      "created_at": "2025-06-25T04:36:08.824Z",
+      "id": 2,
+      "term": false,
+      "nextPage": true
+    },
+    {
+      "product_name": "sdfsdfsdf",
+      "price": "sdfsdfsdfsdfds",
+      "created_at": "2025-07-11T08:39:51.178Z",
+      "id": 3
+    },
+    {
+      "product_name": "ddfs",
+      "price": "fsdfsdfsdfsdfdsfsdfsdfdsfdfdf",
+      "created_at": "2025-07-11T08:40:04.783Z",
+      "id": 4
+    },
+    {
+      "product_name": "sdfsdfdsfsdfsd",
+      "price": "sdfsdfsd",
+      "created_at": "2025-07-11T08:40:16.234Z",
+      "id": 5
+    }
+  ]
+}
