@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
-import { Trefoil } from 'ldrs/react'
 import 'ldrs/react/Trefoil.css'
 import { toast } from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
+import LoadingTag from "../LoadingTag";
 
 const EditProductCart = () => {
     const { id } = useParams();
@@ -31,14 +31,8 @@ const EditProductCart = () => {
         <>
             {
                 isLoading ?
-                    <div className="w-full flex justify-center h-screen m-auto"><Trefoil
-                        size="40"
-                        stroke="4"
-                        strokeLength="0.15"
-                        bgOpacity="0.1"
-                        speed="1.4"
-                        color="black"
-                    /></div> :
+                    <LoadingTag />
+                    :
 
                     <form onSubmit={handleSubmit(handleForm)} className="w-full md:w-1/2 lg:w-1/2">
                         <div className="relative z-0 w-full mb-5 group">
@@ -51,18 +45,18 @@ const EditProductCart = () => {
                         <div className="relative z-0 w-full mb-5 group">
                             <input
                                 defaultValue={data.price}
-                                {...register("price", { required: true })} type="text" id="price" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
+                                {...register("price", { required: true })} type="number" id="price" className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer" placeholder=" " />
                             <label htmlFor="price" className="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">Product Price</label>
                             {errors.price && <span className="text-red-600">This field is required</span>}
                         </div>
 
                         <div className="flex items-center mb-4">
-                            <input {...register("term")} id="term" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                            <input {...register("term")} id="term" type="checkbox" value="" checked className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                             <label htmlFor="term" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default checkbox</label>
                         </div>
                         <div className="flex items-center">
                             <input {...register("nextPage")} id="nextPage" type="checkbox" value="" className="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
-                            <label htmlFor="nextPage" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Pass Next Page</label>
+                            <label htmlFor="nextPage" className="ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Return to Product List Page</label>
                         </div>
 
                         <div className="flex items-center justify-end gap-2">

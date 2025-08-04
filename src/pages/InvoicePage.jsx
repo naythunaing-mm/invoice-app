@@ -1,6 +1,6 @@
-import InvoiceList from "../components/InvoiceList"
+import InvoiceList from "../components/invoice/InvoiceList"
 import Breadcrumb from "../components/Breadcrumb"
-const Invoice = () => {
+const InvoicePage = () => {
     return (
         <>
             <Breadcrumb currentPageTitle="Invoice" />
@@ -8,4 +8,4 @@ const Invoice = () => {
         </>
     )
 }
-export default Invoice
+export default InvoicePage

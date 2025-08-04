@@ -1,8 +1,8 @@
-import Container from "./layout/Container";
+import Container from "./Container";
 import { Outlet } from "react-router-dom"
-import Footer from "./layout/Footer";
+import Footer from "./Footer";
 import { Toaster } from "react-hot-toast";
-import Header from "./layout/Header";
+import Header from "./Header";
 
 const Layout = () => {
     return (

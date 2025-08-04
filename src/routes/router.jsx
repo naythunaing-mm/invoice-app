@@ -1,9 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import NotFoundPage from "../pages/NotFoundPage";
 import DashboardPage from "../pages/DashboardPage";
 import ProductPage from "../pages/ProductPage";
-import Invoice from "../pages/Invoice";
+import InvoicePage from "../pages/InvoicePage";
 import SalePage from "../pages/SalePage";
 import ProductCreatePage from "../pages/ProductCreatePage";
 import ProductEditPage from "../pages/ProductEditPage";
@@ -24,7 +24,7 @@ const router = createBrowserRouter([
             },
             {
                 path: "/invoice",
-                element: <Invoice />
+                element: <InvoicePage />
             },
             {
                 path: "/sale-module",

@@ -1,10 +1,11 @@
 import Breadcrumb from "../components/Breadcrumb"
+import InvoiceInfo from "../components/invoice/InvoiceInfo"
 
 const SalePage = () => {
     return (
         <>
             <Breadcrumb currentPageTitle="Sale" />
-            <h1>SalePage</h1>
+            <InvoiceInfo />
         </>
     )
 }

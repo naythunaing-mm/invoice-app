@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { Trefoil } from 'ldrs/react'
 import 'ldrs/react/Trefoil.css'
 import { toast } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import LoadingTag from "../LoadingTag";
 
 const CreateProductCart = () => {
     const { register, handleSubmit, formState: { errors }, reset
@@ -33,14 +33,8 @@ const CreateProductCart = () => {
         <>
             {
                 isLoading ?
-                    <div className="w-full flex justify-center h-screen m-auto"><Trefoil
-                        size="40"
-                        stroke="4"
-                        strokeLength="0.15"
-                        bgOpacity="0.1"
-                        speed="1.4"
-                        color="black"
-                    /></div> :
+                    <LoadingTag />
+                    :
 
                     <div className="border p-5 flex flex-col items-center align-center">
                         <form onSubmit={handleSubmit(handleForm)} className="w-full md:w-1/2 lg:w-1/2">

@@ -1,5 +1,5 @@
 import Breadcrumb from "../components/Breadcrumb"
-import ProductList from "../components/ProductList"
+import ProductList from "../components/product/ProductList"
 import { HiOutlineSearch } from "react-icons/hi";
 import { Link } from "react-router-dom";
 

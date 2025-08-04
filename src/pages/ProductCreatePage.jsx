@@ -1,5 +1,5 @@
 import Breadcrumb from "../components/Breadcrumb"
-import CreateProductCart from "../components/CreateProductCart"
+import CreateProductCart from "../components/product/CreateProductCart"
 
 const ProductCreatePage = () => {
     return (

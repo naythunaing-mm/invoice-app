@@ -19,7 +19,7 @@ const ProductRow = ({ product }) => {
                 },
             })
         setLoading(false);
-        toast.success('Successfully toasted!')
+        toast.success(`Deleted  "${product.product_name}"  successfully!`);
         mutate(`${import.meta.env.VITE_API_URL}/products`);
     }
 
