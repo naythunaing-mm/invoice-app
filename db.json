@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "product_name": "test test",
+      "product_name": "Banana",
       "price": "5000",
       "created_at": "2025-07-31T04:06:11.750Z",
       "id": 1,
@@ -9,76 +9,100 @@
       "nextPage": true
     },
     {
-      "product_name": "test ny tr pr",
+      "product_name": "Orange",
       "price": "5000",
       "created_at": "2025-07-31T04:08:31.294Z",
-      "id": 2
+      "id": 2,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "uuu",
+      "product_name": "Apple",
       "price": "5400",
       "created_at": "2025-07-31T04:09:19.142Z",
-      "id": 3
+      "id": 3,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "Product 3",
+      "product_name": "Grape",
       "price": "5000",
       "created_at": "2025-07-31T04:10:47.654Z",
-      "id": 4
+      "id": 4,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "price-testing",
+      "product_name": "Mango",
       "price": "4000",
       "created_at": "2025-07-31T04:11:41.726Z",
-      "id": 5
+      "id": 5,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test",
+      "product_name": "Pineapple",
       "price": "5000",
       "created_at": "2025-07-31T04:12:11.165Z",
-      "id": 6
+      "id": 6,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test",
-      "price": "781",
+      "product_name": "Papaya",
+      "price": "5000",
       "created_at": "2025-07-31T04:12:44.749Z",
-      "id": 7
+      "id": 7,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test ny tr pr",
-      "price": "500",
+      "product_name": "Strawberry",
+      "price": "2000",
       "created_at": "2025-07-31T04:13:04.645Z",
-      "id": 8
+      "id": 8,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test ny tr pr",
+      "product_name": "Blueberry",
       "price": "4500",
       "created_at": "2025-07-31T04:13:40.621Z",
-      "id": 9
+      "id": 9,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "Product 3",
+      "product_name": "Watermelon",
       "price": "45200",
       "created_at": "2025-07-31T04:14:24.734Z",
-      "id": 10
+      "id": 10,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test ny tr pr",
-      "price": "342",
+      "product_name": "Raspberry",
+      "price": "7000",
       "created_at": "2025-07-31T04:14:39.413Z",
-      "id": 11
+      "id": 11,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "Product 3",
-      "price": "500",
+      "product_name": "Kiwi",
+      "price": "8000",
       "created_at": "2025-07-31T04:14:52.741Z",
-      "id": 12
+      "id": 12,
+      "term": true,
+      "nextPage": true
     },
     {
-      "product_name": "test ny tr pr",
+      "product_name": "Plum",
       "price": "3012",
       "created_at": "2025-07-31T04:17:08.846Z",
-      "id": 13
+      "id": 13,
+      "term": true,
+      "nextPage": true
     }
   ]
 }

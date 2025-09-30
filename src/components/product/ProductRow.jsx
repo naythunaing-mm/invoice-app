@@ -18,17 +18,17 @@ const ProductRow = ({ product }) => {
                     'Content-Type': 'application/json'
                 },
             })
-        setLoading(false);
         toast.success(`Deleted  "${product.product_name}"  successfully!`);
         mutate(`${import.meta.env.VITE_API_URL}/products`);
+        setLoading(false);
     }
 
     return (
         <>
             {
                 isLoading ?
-                    <><ProductSkeletonLoader /></>
-                    : <>
+                    (<ProductSkeletonLoader />)
+                    : (
                         <tr key={product.id} className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                             <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                 {product.id}
@@ -48,7 +48,7 @@ const ProductRow = ({ product }) => {
                                 <a onClick={handleClick} className="font-medium text-blue-600 dark:text-blue-500 hover:underline"><HiOutlineTrash className="w-8 h-5" /></a>
                             </td>
                         </tr>
-                    </>
+                    )
             }
         </>
     )

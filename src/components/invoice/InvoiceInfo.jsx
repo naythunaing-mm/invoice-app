@@ -79,13 +79,14 @@ const ProductForm = () => {
             <SaleForm />
             <InvoiceTable />
             <div className="flex items-center justify-end p-6 space-x-2 rounded-b dark:border-gray-600">
-                <input checked id="checked-checkbox" type="checkbox" value="" className="w-4 mx-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                <input checked id="checked-checkbox"
+                    {...register("terms", { required: true })} type="checkbox" className="w-4 mx-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded-sm focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                 I accept Terms & conditions.
                 <button
                     type="submit" form='handleForm'
                     className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                    Product Submit
+                    Confirm Voucher
                 </button>
 
             </div>

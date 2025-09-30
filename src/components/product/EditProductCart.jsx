@@ -3,16 +3,19 @@ import 'ldrs/react/Trefoil.css'
 import { toast } from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import useSWR from "swr";
-import LoadingTag from "../LoadingTag";
 
+import LoadingTag from "../LoadingTag";
+import { useState } from "react";
+const fetcher = (...args) => fetch(...args).then(res => res.json());
 const EditProductCart = () => {
     const { id } = useParams();
-    const fetcher = (...args) => fetch(...args).then(res => res.json());
     const { data, isLoading } = useSWR(`${import.meta.env.VITE_API_URL}/products/${id}`, fetcher);
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
     const navigate = useNavigate();
+    const [editLoading, setEditLoading] = useState(false);
     const handleForm = async (data) => {
+        setEditLoading(true);
         await fetch(`${import.meta.env.VITE_API_URL}/products/${id}`, {
             method: 'PATCH',
             headers: {
@@ -20,7 +23,8 @@ const EditProductCart = () => {
             },
             body: JSON.stringify(data),
         })
-        toast.success('Successfully toasted!')
+        setEditLoading(false);
+        toast.success('Edit data Successfully!')
         reset;
         if (data.nextPage) {
             navigate("/product");
@@ -30,11 +34,11 @@ const EditProductCart = () => {
     return (
         <>
             {
-                isLoading ?
-                    <LoadingTag />
+                isLoading || editLoading ?
+                    (<LoadingTag />)
                     :
 
-                    <form onSubmit={handleSubmit(handleForm)} className="w-full md:w-1/2 lg:w-1/2">
+                    (<form onSubmit={handleSubmit(handleForm)} className="w-full md:w-1/2 lg:w-1/2">
                         <div className="relative z-0 w-full mb-5 group">
                             <input
                                 defaultValue={data.product_name}
@@ -63,7 +67,7 @@ const EditProductCart = () => {
                             <button type="submit" className="text-white bg-gray-800 hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-gray-600 dark:hover:bg-gray-700 dark:focus:ring-gray-800">Cancel</button>
                             <button type="submit" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Submit</button>
                         </div>
-                    </form>
+                    </form>)
             }
         </>
     )

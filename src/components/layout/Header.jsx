@@ -21,7 +21,7 @@ const Header = () => {
     return (
 
         <>
-            <header className="my-6 w-full px-2 md:px-4 lg:px-8 max-w-5xl mx-auto">
+            <header className="my-6 w-full shadow-md p-3">
                 <div className="flex justify-between">
                     <h1 className="text-3xl font-bold dark:text-slate-300">Invoice App</h1>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
